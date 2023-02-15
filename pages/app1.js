@@ -1,4 +1,4 @@
-//Funciones
+/* //Funciones
 
 //Función para ingresar a la cuenta
 function ingresarUsuario () {
@@ -67,3 +67,4 @@ let standard = 20000
 
 // Programa
 ingresarUsuario();
+ */
