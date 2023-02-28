@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 #header {
     position: absolute;
     z-index: 10;
@@ -56,4 +60,37 @@
     border-radius: 5px;
     padding: 10px 20px;
     text-decoration: none;
+}
+#rooms {
+    margin-top: 4rem;
+    background-image: url("../images/bgRooms3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+    height:75vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+    background: rgba(250, 350, 250, 0.6);
+
+}
+.rooms-suites {
+    margin-top: 3rem;
+    font-size: 3rem;
+    color: #173E57;
+    font-family: monospace;
+    font-weight: lighter;
+}
+.description {
+    margin: 1rem 3rem 0 3rem;
+    padding: 4rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    color: #09335A;
+    font-family: monospace;
+
 }
