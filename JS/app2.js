@@ -114,11 +114,11 @@ function programa (){
     } while (opcion != "6")
 }
 // Variables, Objetos, Arrays
-let room
+/* let room
 let standard = 20000 
 let triple = 25000
 let superior = 27000 
-let suite = 35000
+let suite = 35000 */
 
 class Habitaciones {
     constructor(tipo,precio,cantidad){
@@ -128,14 +128,14 @@ class Habitaciones {
     }
 }
 
-let habitación = [
+/* let habitación = [
     {tipo: "Standard", precio: "20000", cantidad:"2"},
     {tipo: "Triple", precio: "25000", cantidad: "3"},
     {tipo: "Superior", precio: "27000", cantidad: "2"},
     {tipo: "Suite", precio: "35000", cantidad: "2"},
 ]
-
+ */
 let carritoCompras = []
 
 // Programa
-ingresarUsuario();
+/* ingresarUsuario(); */

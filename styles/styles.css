@@ -1,4 +1,5 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -14,7 +15,7 @@
     font-weight: bold;
     font-size: 1.5em;
     text-transform: uppercase;
-    color: #ccc !important;
+    color: #fff !important;
 }
 .nav-item {
     font-weight: 600;
@@ -22,7 +23,7 @@
     padding-left: 50px;
 }
 .nav-link {
-    color: #ccc !important;
+    color: #fff !important;
     letter-spacing: 2px;
     font-size: 1em;
     font-weight: 700;
@@ -35,62 +36,82 @@
 }
 .main {
     position: relative;
-    background: url(/images/nav33.jpg);
+    background: url(../images/bgIndex.jpg);
     min-height: 100vh;
     background-size: cover;
     background-position: center;
     padding: 20% 14%;
 }
+.main .container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    height: 13rem;
+}
 .main h2 {
     font-size: 2.6em;
     color: #dcdde1;
     text-transform: uppercase;
-    font-weight: bold;
+    margin: 0.8rem;
+    font-weight: 300;
 }
 .main p {
-    margin-top: 1em;
-    padding: 0;
+    margin: 1.2rem 0;
     font-size: 16px;
     color: #fff;
-    padding-bottom: 25px;
+    font-weight: 200;
 }
 .main .readMore {
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 0.5rem;
     text-decoration: none;
 }
 #rooms {
-    margin-top: 4rem;
-    background-image: url("../images/bgRooms3.jpg");
+    background-image: url("../images/bgRooms4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position:bottom;
-    height:75vh;
+    height:90vh;
 }
-.container {
+.containerRooms {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
     height: 100%;
-    background: rgba(250, 350, 250, 0.6);
+    background: rgba(250, 350, 250, 0.3);
 
 }
 .rooms-suites {
-    margin-top: 3rem;
+    margin-top: 7rem;
     font-size: 3rem;
     color: #173E57;
     font-family: monospace;
     font-weight: lighter;
 }
 .description {
-    margin: 1rem 3rem 0 3rem;
-    padding: 4rem;
+    margin: 0 3rem 0 3rem;
+    padding: 1rem;
     font-size: 1.5rem;
     justify-content: center;
     color: #09335A;
+    font-family: monospace;
+    
+
+}
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6rem;
+}
+#cards h2 {
+    text-transform: uppercase;
+    color: #262626;
+    margin-bottom: 8rem;
     font-family: monospace;
 
 }
