@@ -3,7 +3,7 @@ const rooms = [
         id: 1,
         type: "Suite",
         name: "Suite Double",
-        precio: 37000,
+        price: 37000,
         cantidad: 2,
         img: "../images/suiteDouble.jpg"
     },
@@ -11,7 +11,7 @@ const rooms = [
         id: 2,
         type: "Suite",
         name: "Suite Single",
-        precio: 34000,
+        price: 34000,
         cantidad: 1,
         img: "../images/suiteSingle.jpg"
     },
@@ -19,7 +19,7 @@ const rooms = [
         id: 3,
         type: "Superior",
         name: "Superior Double",
-        precio: 30000,
+        price: 30000,
         cantidad: 2,
         img: "../images/superiorDouble.jpg"
     },
@@ -27,7 +27,7 @@ const rooms = [
         id: 4,
         type: "Superior",
         name: "Superior Single",
-        precio: 27000,
+        price: 27000,
         cantidad: 1,
         img: "../images/superiorSingle.jpg"
     },
@@ -35,7 +35,7 @@ const rooms = [
         id: 5,
         type: "Standard",
         name: "Standard Double",
-        precio: 24000,
+        price: 24000,
         cantidad: 2,
         img: "../images/standardDouble.jpg"
     },
@@ -43,7 +43,7 @@ const rooms = [
         id: 6,
         type: "Standard",
         name: "Standard Single",
-        precio: 21500,
+        price: 21500,
         cantidad: 1,
         img: "../images/standardSingle.jpg"
     },
@@ -51,7 +51,7 @@ const rooms = [
         id: 7,
         type: "Triple",
         name: "Triple",
-        precio: 27000,
+        price: 27000,
         cantidad: 3,
         img: "../images/triple.jpg"
     }
