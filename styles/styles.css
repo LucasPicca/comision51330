@@ -146,6 +146,45 @@
     background-color: black;
     width: 3rem;
 }
-.cardFunction {
-    background-color: brown;
+.cart {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.selectedRoom{
+    margin-top: 4rem;
+    background-image: linear-gradient(to right top, #ffffff, #f8f8fb, #f1f2f8, #e9ebf4, #e1e5f1, #dce3f0, #d6e2ef, #d0e0ee, #cde2ed, #cbe4eb, #cbe6e8, #cce7e5);
+    width: 90%;
+    height: auto;
+    font-size: 1.4rem;
+    font-family: monospace;
+    display: flex;
+    align-items:stretch;
+}
+.selectedRoom img {
+    width: 20%;
+}
+.roomBooked {
+    margin: 2rem 1rem;
+}
+.totalPay {
+    margin: 2rem 1rem;
+}
+.delete-room {
+    align-items: center;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
 }
