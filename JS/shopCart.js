@@ -1,7 +1,11 @@
 let card = document.getElementById("cards");
+let icon = document.getElementById("iconCart");
+let divCart = document.getElementById("cart");
+let showTotal = document.getElementById("totalContainer");
+
 
 rooms.forEach((c, index)=>{
-    card.innerHTML += `
+        card.innerHTML += `
     <div class="card card mx-5 my-5" style="max-width: 1000px;">
         <div class="row g-0">
             <div class="col-md-5">
@@ -17,7 +21,8 @@ rooms.forEach((c, index)=>{
             </div>
         </div>
     </div>`
-})    
+});    
+
 
 const addCart = (index)=>{
     const clickButton = yourCart.findIndex((element) =>{
@@ -32,9 +37,7 @@ const addCart = (index)=>{
         yourCart[clickButton].cantidad += 1
         getCart();
     }
-}
-
-let divCart = document.getElementById("cart");
+};
 
 const getCart = ()=>{
     divCart.className = "cart";
@@ -51,20 +54,51 @@ const getCart = ()=>{
         <button class="btn-cards" id= "removeRoom" role="button" onClick ="deleteRooms(${index})">Remove from your Cart</button>
         `
         divCart.appendChild(cartContainer);
-
-        const total = yourCart.reduce((acc, el)=> acc + el.price * el.cantidad, 0);
-        const totalCart = document.createElement("div"); 
+    })
+//SUMA DEL TOTAL
+    const total = yourCart.reduce((acc, el)=> acc + el.price * el.cantidad, 0);
+    total.className = "show-total"
+    const totalCart = document.createElement("div"); 
         totalCart.className = "totalPay"
         totalCart.innerHTML =`Total Amount $${total}`
-        cartContainer.append(totalCart)
-    })
-}
+        showTotal.append(totalCart) 
+}; 
+//ELIMINA HABITACION
 const deleteRooms = (index) =>{
     yourCart.splice(index, 1)
     getCart();
 }
+    
 
-const inputName = document.getElementById("name");
+
+
+
+
+/* 
+icon.addEventListener("click", ()=>{
+showTotal.style.display = "flex"
+showTotal.innerHTML = "";
+const cartHeader = document.createElement("div");
+cartHeader.className = "cartHeader";
+cartHeader.innerHTML = `<h2 class= "cartHeaderTitle"> Your Cart </h2>`
+showTotal.append(cartHeader);
+
+const cartButton = document.createElement("h2");
+cartButton.innerText = "X"
+cartButton.className = "cartHeaderButton";
+cartButton.addEventListener("click", ()=>{
+    showTotal.style.display = "none";
+})
+
+cartHeader.appendChild(cartButton);
+
+}) */
+
+
+
+//PARA QUITAR*/
+
+/* const inputName = document.getElementById("name");
 const inputCountry = document.getElementById("country");
 const btnSave = document.getElementById("saveBtn");
 
@@ -76,6 +110,7 @@ const usersLs = JSON.parse(localStorage.getItem("users"));
 if(usersLs){
     users = usersLs
 }
+
 
 const userSaved = ()=> {
     const getName = inputName.value;
@@ -89,15 +124,17 @@ const userSaved = ()=> {
     inputName.value = "";
     inputCountry.value = "";
 }
-usersLs.forEach((user)=>{
+users.forEach((user)=>{
     const li = document.createElement("li")
     li.innerHTML = `
-    <h4> Name: ${user.getName}</4>
-    <p>  Country: ${user.getCountry}
+    <h4> Name: ${user.inputName}</4>
+    <p>  Country: ${user.inputCountry}
     `
     inputName.appendChild(li)
-})
+}) */
 
 
+
+///PARA QUITAR*//
 
 
