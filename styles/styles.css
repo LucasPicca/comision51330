@@ -34,10 +34,6 @@
     border-radius: 5px;
     transition: all 0.6 ease 0s;
 }
-/* #iconCart {
-    display: flex;
-    justify-content: end;
-} */
 .main {
     position: relative;
     background: url(../images/bgIndex.jpg);
@@ -138,7 +134,6 @@
     padding: 1rem;
     margin-left: 3rem;
 }
-      
 .btn-cards:before {
     background-color: black;
     content: "";
@@ -147,8 +142,7 @@
     margin-right: 10px;
     transition: all .80s cubic-bezier(.25,.8,.25,1);
     width: 0;
-}
-      
+}  
 .btn-cards:hover:before {
     background-color: black;
     width: 3rem;
@@ -194,7 +188,11 @@
     width: 20%;
 }
 .roomBooked {
-    margin: 2rem 1rem;
+    margin: 2rem 1.7rem;
+}
+.roomBookedRoom {
+    margin: 2rem 0.6rem;
+    text-align: center;
 }
 .roomBookedName {
 text-transform: uppercase;
@@ -231,4 +229,14 @@ margin: 2%;
 .remove-room:hover:before {
     background-color: #cbe4eb;
     width: 3rem;
+}
+.subtract {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.add {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }

@@ -64,4 +64,4 @@ const rooms = [
     }
 ];
 ///AÑADI: ROOMQ: "" => SIN FUNCIONALIDAD TODAVIA. => VERIFICAR SI SIRVE PARA MULTIPLICAR POR CANTIDAD
-let yourCart = [];
+let yourCart = JSON.parse(localStorage.getItem("lsCart")) || [];

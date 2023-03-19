@@ -47,6 +47,7 @@ buy.addEventListener("click", () => {
             price: room.price,
             quantity: room.quantity,
         });
+        cartStorage();
     };
 });
 })
@@ -79,11 +80,29 @@ yourCart.forEach((room, index) =>{
     <img src="${room.img}" class="img-fluid rounded-start" alt="${room.name}">
     <div class= "roomBookedName"> Name: ${room.name}</div>
     <div class= "roomBooked"> Price: $${room.price}</div>
-    <div class= "roomBooked"> Rooms: ${room.quantity}</div>
+    <span class= "subtract"> - </span>
+    <div class= "roomBookedRoom"> Rooms: ${room.quantity}</div>
+    <span class= "add"> + </span>
     <div class= "roomBooked"> Subtotal: $${room.price * room.quantity}</div>
     <button class="remove-room" id= "removeRoom" role="button" onClick ="removeRoom(${index})">Remove this Room</button>
     `
     cartContainer.append(cartContent);
+    //ELIMINA CANTIDAD DE ROOM
+    const subtract = cartContent.querySelector(".subtract");
+    subtract.addEventListener("click", ()=> {
+        if (room.quantity !== 1) {
+            room.quantity--;            
+        }
+        cartStorage();
+        creatingCart();
+    });
+     //SUMA CANTIDAD DE ROOM
+     const add = cartContent.querySelector(".add");
+     add.addEventListener("click", ()=> {
+            room.quantity++;        
+        cartStorage();       
+        creatingCart();
+     });
 });
 
 //SUMA TOTAL
@@ -97,9 +116,14 @@ cartContainer.append(totalCart);
 };
 
 iconCart.addEventListener("click", creatingCart);
-//ELIMINA ROOM
+//ELIMINA TOTALIDAD DE ROOM
 const removeRoom = (index) =>{
     yourCart.splice(index, 1)
+    cartStorage();
     creatingCart();
 };
 
+const cartStorage = ()=> {
+    localStorage.setItem("lsCart", JSON.stringify(yourCart));   
+}
+JSON.parse(localStorage.getItem("lsCart"));
