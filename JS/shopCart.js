@@ -5,7 +5,7 @@ let showTotal = document.getElementById("totalContainer");
 
 
 rooms.forEach((c, index)=>{
-        card.innerHTML += `
+    card.innerHTML += `
     <div class="card card mx-5 my-5" style="max-width: 1000px;">
         <div class="row g-0">
             <div class="col-md-5">
@@ -68,6 +68,7 @@ const deleteRooms = (index) =>{
     yourCart.splice(index, 1)
     getCart();
 }
+
     
 
 

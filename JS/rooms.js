@@ -5,6 +5,7 @@ const rooms = [
         name: "Suite Double",
         price: 37000,
         person: 2,
+        quantity: 1,
         img: "../images/suiteDouble.jpg"
     },
     {
@@ -13,6 +14,7 @@ const rooms = [
         name: "Suite Single",
         price: 34000,
         person: 1,
+        quantity: 1,
         img: "../images/suiteSingle.jpg"
     },
     {
@@ -21,6 +23,7 @@ const rooms = [
         name: "Superior Double",
         price: 30000,
         person: 2,
+        quantity: 1,
         img: "../images/superiorDouble.jpg"
     },
     {
@@ -29,6 +32,7 @@ const rooms = [
         name: "Superior Single",
         price: 27000,
         person: 1,
+        quantity: 1,
         img: "../images/superiorSingle.jpg"
     },
     {
@@ -37,6 +41,7 @@ const rooms = [
         name: "Standard Double",
         price: 24000,
         person: 2,
+        quantity: 1,
         img: "../images/standardDouble.jpg"
     },
     {
@@ -45,6 +50,7 @@ const rooms = [
         name: "Standard Single",
         price: 21500,
         person: 1,
+        quantity: 1,
         img: "../images/standardSingle.jpg"
     },
     {
@@ -53,8 +59,9 @@ const rooms = [
         name: "Triple",
         price: 27000,
         person: 3,
+        quantity: 1,
         img: "../images/triple.jpg"
     }
 ];
-
+///AÑADI: ROOMQ: "" => SIN FUNCIONALIDAD TODAVIA. => VERIFICAR SI SIRVE PARA MULTIPLICAR POR CANTIDAD
 let yourCart = [];

@@ -34,6 +34,10 @@
     border-radius: 5px;
     transition: all 0.6 ease 0s;
 }
+/* #iconCart {
+    display: flex;
+    justify-content: end;
+} */
 .main {
     position: relative;
     background: url(../images/bgIndex.jpg);
@@ -99,8 +103,11 @@
     justify-content: center;
     color: #09335A;
     font-family: monospace;
-    
-
+}
+.shop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #cards{
     display: flex;
@@ -113,7 +120,6 @@
     color: #262626;
     margin-bottom: 8rem;
     font-family: monospace;
-
 }
 .btn-cards {
     align-items: center;
@@ -147,22 +153,42 @@
     background-color: black;
     width: 3rem;
 }
-.cart {
-    margin-bottom: 4rem;
+#cartContainer {
     display: flex;
     flex-direction: column;
+    margin: 0 10%;
     align-items:center;
-    justify-content: center;
+    justify-items: center;
+    width: 80%;
+    max-height: 80%;
+    background-color: #262626;
+    color: #cbe4eb;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    border-radius: 1%;
+
 }
-.selectedRoom{
-    margin-top: 4rem;
-    background-image: linear-gradient(to right top, #ffffff, #f8f8fb, #f1f2f8, #e9ebf4, #e1e5f1, #dce3f0, #d6e2ef, #d0e0ee, #cde2ed, #cbe4eb, #cbe6e8, #cce7e5);
+.modal-header{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #262626;
+    color: #cbe4eb;
+    width: 80%;
+}
+.modal-header-button {
+    cursor: pointer;
+}
+.selectedRoom {
+    margin-top: 3rem;
     width: 90%;
-    height: auto;
-    font-size: 1.4rem;
+    height: 70%;
+    font-size: 1.2rem;
     font-family: monospace;
     display: flex;
-    align-items:stretch;
+    justify-content: space-between;
 }
 .selectedRoom img {
     width: 20%;
@@ -170,22 +196,39 @@
 .roomBooked {
     margin: 2rem 1rem;
 }
-.totalPay {
-    margin: 2rem 1rem;
+.roomBookedName {
+text-transform: uppercase;
+max-width: 15%;
+margin: 2%;
 }
-.delete-room {
+.totalCart {
+    margin: 2rem 1rem;
+    font-size: 1.4rem;
+    font-family: monospace;
+}
+.remove-room {
     align-items: center;
     background-color: transparent;
-    color: black;
-    cursor: pointer;
+    color:#cbe4eb;
     display: flex;
-    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: monospace;
     font-size: 1rem;
-    font-weight: 700;
     line-height: 1.5;
     text-decoration: none;
     text-transform: uppercase;
     outline: 0;
     border: 0;
-    padding: 1rem;
+}
+.remove-room:before {
+    background-color: #cbe4eb;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .80s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+}
+.remove-room:hover:before {
+    background-color: #cbe4eb;
+    width: 3rem;
 }
