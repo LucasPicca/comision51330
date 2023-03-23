@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <section id="header">
@@ -37,6 +39,8 @@
                             </li>
                         </ul>
                     </div>
+                    <div id="weather" class="weather">
+                    </div>
                 </div>
             </nav>
         </div>
@@ -49,29 +53,30 @@
                     odit atque perspiciatis eligendi similique accusamus explicabo. A, aut nesciunt unde.</p>
             </div>
         </section>
-       <!--  <section id="formHome">
-            <input type="text" class="form-control my-2" id="name" placeholder="Write your Name">
-            <input type="text" class="form-control my-2" id="country" placeholder="Write the country you would like to go">
-            <button id="saveBtn" class="btn">Save</button>
-        </section> -->
-
-
-<!--         <section id="cards">
-            <h2>Choose the right room for you</h2>
+        <section id="datePicker">
+            <form>
+                <input class="form-control" type="datetime-local" placeholder="Check in">
+            </form>
         </section>
-        <section id="cart">
-        </section>
-        <section id="totalContainer" class="total-container"></section>
-        -->
-
         <section id="shopContent" class="shop-content"></section>
         
         <section id="cartContainer" class="cart-container"></section>
     </main>
     <script src="../JS/rooms.js"></script>
     <script src="../JS/shopCart2.js"></script>
+    <script src="../JS/weather.js"></script>
     <!--     <script src="../JS/shopCart.js"></script> -->    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+       flatpickr("input[type=datetime-local]",{
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    altInput: true,
+    altFormat: "F j, Y",
+    });
+    </script>
 </body>
 
 </html>

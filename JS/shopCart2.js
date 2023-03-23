@@ -25,13 +25,22 @@ rooms.forEach((room) => {
     `
 shopContent.append(content);
 
-let buy = document.createElement("button");
-buy.innerHTML = "Book this room";
-buy.className = "btn-cards";
+let book = document.createElement("button");
+book.innerHTML = "Book this room";
+book.className = "btn-cards";
 
-content.append(buy);
+content.append(book);
 
-buy.addEventListener("click", () => {
+book.addEventListener("click", () => {
+        Toastify({
+            text:"You've booked this Room",
+            duration: 3000,
+            position: "right",
+            gravity: "bottom",
+            style: {
+                background: "linear-gradient(to right top, #0ca6d1, #59b6d6, #84c5dc, #a8d5e3, #cbe4eb)",
+              } 
+        }).showToast()
     const verifyQuantity = yourCart.some((repeatRoom) => repeatRoom.id === room.id);
     if (verifyQuantity) {
         yourCart.map((ro) => {
