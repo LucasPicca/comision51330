@@ -9,25 +9,25 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  yearExpiracion = document.querySelector('#tarjeta .year');
 	  ccv = document.querySelector('#tarjeta .ccv');
 
-// * Volteamos la tarjeta para mostrar el frente.
+//  Voltea la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
 	if(tarjeta.classList.contains('active')){
 		tarjeta.classList.remove('active');
 	}
 }
 
-// * Rotacion de la tarjeta
+//  Rotacion de la tarjeta
 tarjeta.addEventListener('click', () => {
 	tarjeta.classList.toggle('active');
 });
 
-// * Boton de abrir formulario
+//  Boton de abrir formulario
 btnAbrirFormulario.addEventListener('click', () => {
 	btnAbrirFormulario.classList.toggle('active');
 	formulario.classList.toggle('active');
 });
 
-// * Select del mes generado dinamicamente.
+//  Select del mes generado dinamicamente.
 for(let i = 1; i <= 12; i++){
 	let opcion = document.createElement('option');
 	opcion.value = i;
@@ -35,7 +35,7 @@ for(let i = 1; i <= 12; i++){
 	formulario.selectMes.appendChild(opcion);
 }
 
-// * Select del año generado dinamicamente.
+// Select del año generado dinamicamente.
 const yearActual = new Date().getFullYear();
 for(let i = yearActual; i <= yearActual + 8; i++){
 	let opcion = document.createElement('option');
@@ -44,7 +44,7 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 	formulario.selectYear.appendChild(opcion);
 }
 
-// * Input numero de tarjeta
+//  Input numero de tarjeta
 formulario.inputNumero.addEventListener('keyup', (e) => {
 	let valorInput = e.target.value;
 
@@ -78,11 +78,11 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		logoMarca.appendChild(imagen);
 	}
 
-	// Volteamos la tarjeta para que el usuario vea el frente.
+	// Voltea la tarjeta para que el usuario vea el frente.
 	mostrarFrente();
 });
 
-// * Input nombre de tarjeta
+// Input nombre de tarjeta
 formulario.inputNombre.addEventListener('keyup', (e) => {
 	let valorInput = e.target.value;
 
@@ -97,19 +97,19 @@ formulario.inputNombre.addEventListener('keyup', (e) => {
 	mostrarFrente();
 });
 
-// * Select mes
+// Select month
 formulario.selectMes.addEventListener('change', (e) => {
 	mesExpiracion.textContent = e.target.value;
 	mostrarFrente();
 });
 
-// * Select Año
+// Select year
 formulario.selectYear.addEventListener('change', (e) => {
 	yearExpiracion.textContent = e.target.value.slice(2);
 	mostrarFrente();
 });
 
-// * CCV
+//  CCV
 formulario.inputCCV.addEventListener('keyup', () => {
 	if(!tarjeta.classList.contains('active')){
 		tarjeta.classList.toggle('active');
@@ -124,7 +124,7 @@ formulario.inputCCV.addEventListener('keyup', () => {
 	ccv.textContent = formulario.inputCCV.value;
 });
 
-//MODAL FINALIZAR COMPRA
+// MODAL FINALIZAR COMPRA
 
 const finishBtn = document.getElementById("sendBtn");
 
