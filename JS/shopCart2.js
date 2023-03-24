@@ -1,9 +1,9 @@
+
 const shopContent = document.getElementById("shopContent");
 const iconCart = document.getElementById("iconCart");
 const cartContainer = document.getElementById("cartContainer");
-const cartCounter = document.getElementById("counter");
 
-
+//PINTA CARDS DE HABITACIONES
 rooms.forEach((room) => {
     let content = document.createElement ("div");
     content.className = "cards";
@@ -24,6 +24,7 @@ rooms.forEach((room) => {
 </div>
     `
 shopContent.append(content);
+
 
 let book = document.createElement("button");
 book.innerHTML = "Book this room";
@@ -60,7 +61,7 @@ book.addEventListener("click", () => {
     };
 });
 })
-
+//CREA CARRO 
 const creatingCart = () => {
 cartContainer.innerHTML = "";
 cartContainer.style.display = "flex";
@@ -81,6 +82,7 @@ modalButton.addEventListener("click", () => {
 
 modalHeader.append(modalButton);
 
+//PINTA RESERVAS SELECCIONADAS
 yourCart.forEach((room, index) =>{
     const cartContent = document.createElement("div");
  
@@ -122,7 +124,17 @@ totalCart.innerHTML = `
 Total: $ ${total}
 ` 
 cartContainer.append(totalCart);
+
+const finishing = document.createElement("button");
+finishing.className = "finish";
+finishing.innerHTML = `
+<a href="../pagesHtml/cards.html">Finish your Booking</a>
+`;
+
+ totalCart.append(finishing);
 };
+
+
 
 iconCart.addEventListener("click", creatingCart);
 //ELIMINA TOTALIDAD DE ROOM
@@ -131,8 +143,18 @@ const removeRoom = (index) =>{
     cartStorage();
     creatingCart();
 };
-
+//LOCALSTORAGE
 const cartStorage = ()=> {
     localStorage.setItem("lsCart", JSON.stringify(yourCart));   
 }
 JSON.parse(localStorage.getItem("lsCart"));
+
+
+
+
+
+
+
+
+
+

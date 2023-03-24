@@ -83,24 +83,25 @@
     padding-top: 5rem;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    justify-content:end;
+    align-items:start;
     height: 100%;
     background: rgba(250, 350, 250, 0.3);
 }
 .rooms-suites {
-    margin-top: 7rem;
-    font-size: 3rem;
-    color: #173E57;
-    font-family: monospace;
-    font-weight: lighter;
+    margin: 7rem 0 0 4rem;
+    font-size: 2.6em;
+    color: #fff;
+    font-weight: 200;
+    text-transform: uppercase;
 }
 .description {
-    margin: 0 3rem 0 3rem;
+    margin: 0 3rem 10rem 3rem;
     padding: 1rem;
     font-size: 1.5rem;
     justify-content: center;
-    color: #09335A;
-    font-family: monospace;
+    color: #fff;
+    font-weight: lighter;
 }
 .shop-content {
     display: flex;
@@ -112,12 +113,13 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 6rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5), -1px -1px 2px #aaa,
+
 }
 #cards h2 {
     text-transform: uppercase;
     color: #262626;
     margin-bottom: 8rem;
-    font-family: monospace;
 }
 .btn-cards {
     align-items: center;
@@ -157,7 +159,7 @@
     justify-items: center;
     width: 80%;
     max-height: 80%;
-    background-color: #262626;
+    background: rgba(0, 0, 0, 0.8);
     color: #cbe4eb;
     position: fixed;
     overflow: auto;
@@ -170,7 +172,6 @@
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
-    background-color: #262626;
     color: #cbe4eb;
     width: 80%;
 }
@@ -250,3 +251,333 @@ text-transform: uppercase;
 color: #fff;    
 padding: 1%;
 }
+.date-picker{
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #cdc48c, #beb688, #afa984, #a19b80, #928e7c);    
+    margin-bottom: 3rem;
+}
+.formDate {
+    margin-top: 0.5rem;
+    width: 50%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.finish {
+        margin-top: 1rem;
+        align-items: center;
+        background-color: transparent;
+        color:#cbe4eb;
+        display: flex;
+        font-family: monospace;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-decoration: none;
+        text-transform: uppercase;
+        outline: 0;
+        border: 0;
+    }
+.finish a {
+    text-decoration: none;
+    color:#cbe4eb;
+}
+    .finish:before {
+        background-color: #cbe4eb;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        margin-right: 10px;
+        transition: all .80s cubic-bezier(.25,.8,.25,1);
+        width: 0;
+    }
+    .finish:hover:before {
+        background-color: #cbe4eb;
+        width: 3rem;
+    }
+
+
+/* TC´S */
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	padding:10rem;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    text-align: end;
+}
+
+/* ---------- Estilos Generales de las Tarjetas ----------*/
+.tarjeta {
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	color: #fff;
+	transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.tarjeta.active {
+	transform: rotateY(180deg);
+}
+
+.tarjeta > div {
+	padding: 30px;
+	border-radius: 15px;
+	min-height: 315px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+}
+
+/* ---------- Tarjeta Delantera ----------*/
+
+.tarjeta .delantera {
+	width: 100%;
+	background: url(../images/cCard1.jpg);
+	background-size: cover;
+}
+
+.delantera .logo-marca {
+	text-align: right;
+	min-height: 50px;
+}
+
+.delantera .logo-marca img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	max-width: 80px;
+}
+
+.delantera .chip {
+	width: 100%;
+	max-width: 50px;
+	margin-bottom: 20px;
+}
+
+.delantera .grupo .label {
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+	color: #fff;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.delantera .flexbox {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+/* ---------- Tarjeta Trasera ----------*/
+.trasera {
+	background: url(../images/cCard1.jpg);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+.trasera .barra-magnetica {
+	height: 40px;
+	background: #000;
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+
+.trasera .datos {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.trasera .datos p {
+	margin-bottom: 5px;
+}
+
+.trasera .datos #firma {
+	width: 70%;
+}
+
+.trasera .datos #firma .firma {
+	height: 40px;
+	background: repeating-linear-gradient(#719bac 0, #719bac  5px, grey 5px, grey 10px);
+}
+
+.trasera .datos #firma .firma p {
+	line-height: 40px;
+	color: #000;
+	font-size: 30px;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+
+.trasera .datos #ccv {
+	width: 20%;
+}
+
+.trasera .datos #ccv .ccv {
+	background: #fff;
+	height: 40px;
+	color: #000;
+	padding: 10px;
+	text-align: center;
+}
+
+.trasera .leyenda {
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.trasera .link-banco {
+	font-size: 14px;
+	color: #fff;
+}
+
+/* ---------- Contenedor Boton ----------*/
+.contenedor-btn .btn-abrir-formulario {
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 20px;
+	background: #2364d2;
+	color: #fff;
+	position: relative;
+	top: -25px;
+	z-index: 3;
+	border-radius: 100%;
+	box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
+	padding: 5px;
+	transition: all .2s ease;
+	border: none;
+	cursor: pointer;
+}
+
+.contenedor-btn .btn-abrir-formulario:hover {
+	background: #1850b1;
+}
+
+.contenedor-btn .btn-abrir-formulario.active {
+	transform: rotate(45deg);
+}
+
+/* ---------- Formulario Tarjeta ----------*/
+.formulario-tarjeta {
+	background: #fff;
+	width: 100%;
+	max-width: 700px;
+	padding: 150px 30px 30px 30px;
+	border-radius: 10px;
+	position: relative;
+	top: -150px;
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: clip-path .3s ease-out;
+}
+
+.formulario-tarjeta.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+	display: block;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 2px solid #CED6E0;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 2px solid #93BDED;
+}
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: rgb(4,4,4);
+	box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+	width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+	min-width: 100px;
+}
+
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+
+.formulario-tarjeta select {
+	-webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+	position: absolute;
+	color: #CED6E0;
+	top: 18px;
+	right: 15px;
+	transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+	color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	color: #fff;
+	background: #2364d2;
+	box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
+	cursor: pointer;
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+	background: #1850b1;
+}
+    

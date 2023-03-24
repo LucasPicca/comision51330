@@ -63,5 +63,5 @@ const rooms = [
         img: "../images/triple.jpg"
     }
 ];
-///AÑADI: ROOMQ: "" => SIN FUNCIONALIDAD TODAVIA. => VERIFICAR SI SIRVE PARA MULTIPLICAR POR CANTIDAD
+
 let yourCart = JSON.parse(localStorage.getItem("lsCart")) || [];
