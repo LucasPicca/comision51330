@@ -170,13 +170,12 @@
 }
 .modal-header{
     margin-top: 2rem;
-    display: flex;
-    justify-content: space-around;
     color: #cbe4eb;
     width: 80%;
 }
 .modal-header-button {
     cursor: pointer;
+    font-size: 25px;
 }
 .selectedRoom {
     margin-top: 3rem;

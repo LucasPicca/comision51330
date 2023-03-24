@@ -67,9 +67,7 @@ cartContainer.innerHTML = "";
 cartContainer.style.display = "flex";
 const modalHeader = document.createElement("div");
 modalHeader.className = "modal-header";
-modalHeader.innerHTML = `
-<h1>Cart</h1>
-`
+
 cartContainer.append(modalHeader);
 
 const modalButton = document.createElement("p");
